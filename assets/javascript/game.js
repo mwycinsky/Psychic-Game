@@ -16,6 +16,11 @@ var userChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 
 
 if (lettersguessed.indexOf(userGuess) < 0) {  
+    if (userChoices.indexOf(userGuess) < 0) {
+        alert("No, pick a LETTER. Dummy...")
+        return false;
+
+    }
     
     if (userGuess === computerGuess) {
         wins++;
